@@ -1,60 +1,61 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
+import StarRating from "./StarRating";
 
 const tempMovieData = [
   {
-    imdbID: 'tt1375666',
-    Title: 'Inception',
-    Year: '2010',
+    imdbID: "tt1375666",
+    Title: "Inception",
+    Year: "2010",
     Poster:
-      'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg',
+      "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
   },
   {
-    imdbID: 'tt0133093',
-    Title: 'The Matrix',
-    Year: '1999',
+    imdbID: "tt0133093",
+    Title: "The Matrix",
+    Year: "1999",
     Poster:
-      'https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg',
+      "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
   },
   {
-    imdbID: 'tt6751668',
-    Title: 'Parasite',
-    Year: '2019',
+    imdbID: "tt6751668",
+    Title: "Parasite",
+    Year: "2019",
     Poster:
-      'https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_SX300.jpg',
+      "https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_SX300.jpg",
   },
 ];
 
 const tempWatchedData = [
   {
-    imdbID: 'tt1375666',
-    Title: 'Inception',
-    Year: '2010',
+    imdbID: "tt1375666",
+    Title: "Inception",
+    Year: "2010",
     Poster:
-      'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg',
+      "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
     runtime: 148,
     imdbRating: 8.8,
     userRating: 10,
   },
   {
-    imdbID: 'tt0088763',
-    Title: 'Back to the Future',
-    Year: '1985',
+    imdbID: "tt0088763",
+    Title: "Back to the Future",
+    Year: "1985",
     Poster:
-      'https://m.media-amazon.com/images/M/MV5BZmU0M2Y1OGUtZjIxNi00ZjBkLTg1MjgtOWIyNThiZWIwYjRiXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg',
+      "https://m.media-amazon.com/images/M/MV5BZmU0M2Y1OGUtZjIxNi00ZjBkLTg1MjgtOWIyNThiZWIwYjRiXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
     runtime: 116,
     imdbRating: 8.5,
     userRating: 9,
   },
 ];
 
-const KEY = '576a60ae';
+const KEY = "576a60ae";
 
 export default function App() {
-  const [query, setQuery] = useState('inception');
+  const [query, setQuery] = useState("inception");
   const [movies, setMovies] = useState([]);
   const [watched, setWatched] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   const [selectedId, setSelectedId] = useState(null);
 
   function handleSelectMovie(id) {
@@ -68,16 +69,16 @@ export default function App() {
       async function fetchMovies() {
         try {
           setIsLoading(true);
-          setError('');
+          setError("");
           const res = await fetch(
             `http://www.omdbapi.com/?apikey=${KEY}&s=${query}`
           );
           // .then((res) => res.json())
           // .then((data) => setMovies(data.Search));
           if (!res.ok)
-            throw new Error('Something went wrong with fetching movies');
+            throw new Error("Something went wrong with fetching movies");
           const data = await res.json();
-          if (data.Response === 'False') throw new Error('Movie not found');
+          if (data.Response === "False") throw new Error("Movie not found");
           setMovies(data.Search);
           console.log(data.Search);
         } catch (err) {
@@ -127,18 +128,18 @@ export default function App() {
   );
 }
 function Loader() {
-  return <p className='loader'>Loading...</p>;
+  return <p className="loader">Loading...</p>;
 }
 function ErrorMessage({ message }) {
   return (
-    <p className='error'>
+    <p className="error">
       <span>⛔️</span> {message}
     </p>
   );
 }
 function NavBar({ children }) {
   return (
-    <nav className='nav-bar'>
+    <nav className="nav-bar">
       <Logo />
       {children}
     </nav>
@@ -147,15 +148,15 @@ function NavBar({ children }) {
 function NumResults() {
   const [movies, setMovies] = useState(tempMovieData);
   return (
-    <p className='num-results'>
+    <p className="num-results">
       Found <strong>{movies.length}</strong> results
     </p>
   );
 }
 function Logo() {
   return (
-    <div className='logo'>
-      <span role='img'>🍿</span>
+    <div className="logo">
+      <span role="img">🍿</span>
       <h1>usePopcorn</h1>
     </div>
   );
@@ -163,9 +164,9 @@ function Logo() {
 function Search({ query, setQuery }) {
   return (
     <input
-      className='search'
-      type='text'
-      placeholder='Search movies...'
+      className="search"
+      type="text"
+      placeholder="Search movies..."
       value={query}
       onChange={(e) => setQuery(e.target.value)}
     />
@@ -176,15 +177,15 @@ const average = (arr) =>
   arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
 
 function Main({ children }) {
-  return <main className='main'>{children}</main>;
+  return <main className="main">{children}</main>;
 }
 function Box({ children }) {
   const [isOpen, setIsOpen] = useState(true);
 
   return (
-    <div className='box'>
-      <button className='btn-toggle' onClick={() => setIsOpen((open) => !open)}>
-        {isOpen ? '–' : '+'}
+    <div className="box">
+      <button className="btn-toggle" onClick={() => setIsOpen((open) => !open)}>
+        {isOpen ? "–" : "+"}
       </button>
       {isOpen && children}
     </div>
@@ -215,7 +216,7 @@ function Box({ children }) {
 
 function MovieList({ movies, onSelectMovie }) {
   return (
-    <ul className='list'>
+    <ul className="list">
       {movies?.map((movie) => (
         <Movie movie={movie} key={movie.imdbID} onSelectMovie={onSelectMovie} />
       ))}
@@ -239,7 +240,7 @@ function Movie({ movie, onSelectMovie }) {
 
 function WatchedMoviesList({ watched }) {
   return (
-    <ul className='list'>
+    <ul className="list">
       {watched.map((movie) => (
         <WatchedMovies movie={movie} key={movie.imdbID} />
       ))}
@@ -280,7 +281,8 @@ function MovieDetails({ selectedId, onCloseMovie }) {
     Plot: plot,
     Released: realeased,
     Actors: actors,
-    Director: genre,
+    Genre: genre,
+    Director: director,
   } = movie;
   console.log(title, year);
 
@@ -295,12 +297,34 @@ function MovieDetails({ selectedId, onCloseMovie }) {
     getMovieDetails();
   }, []);
   return (
-    <div className='details'>
-      <button className='btn-black' onClick={onCloseMovie}>
-        &larr;
-      </button>
-
-      {selectedId}
+    <div className="details">
+      <header>
+        <button className="btn-black" onClick={onCloseMovie}>
+          &larr;
+        </button>
+        <img src={poster} alt={`Poster of ${movie} movie`} />
+        <div className="details-overview">
+          <h2>{title}</h2>
+          <p>
+            {realeased} &bull; {runtime}
+          </p>
+          <p>{genre}</p>
+          <p>
+            <span>🌟</span>
+            {imdbRating} IMDb rating
+          </p>
+        </div>
+      </header>
+      <section>
+        <div className="rating">
+          <StarRating maxStarRating={10} size={24} />
+        </div>
+        <p>
+          <em>{plot}</em>
+        </p>
+        <p>Starring {actors}</p>
+        <p>Directed by {director}</p>
+      </section>
     </div>
   );
 }
@@ -310,7 +334,7 @@ function WatchedSummary({ watched }) {
   const avgRuntime = average(watched.map((movie) => movie.runtime));
 
   return (
-    <div className='summary'>
+    <div className="summary">
       <h2>Movies you watched</h2>
       <div>
         <p>

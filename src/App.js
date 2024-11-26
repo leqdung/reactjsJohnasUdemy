@@ -58,7 +58,10 @@ export default function App() {
   const [selectedId, setSelectedId] = useState(null);
 
   function handleSelectMovie(id) {
-    setSelectedId(id);
+    setSelectedId((selectedId) => (id === selectedId ? null : id));
+  }
+  function handleCloseMovie(id) {
+    setSelectedId(null);
   }
   useEffect(
     function () {
@@ -108,7 +111,10 @@ export default function App() {
         {/* <WatchedBox /> */}
         <Box>
           {selectedId ? (
-            <MovieDetails selectedId={selectedId} />
+            <MovieDetails
+              selectedId={selectedId}
+              onCloseMovie={handleCloseMovie}
+            />
           ) : (
             <>
               <WatchedSummary watched={watched} />
@@ -218,7 +224,7 @@ function MovieList({ movies, onSelectMovie }) {
 }
 function Movie({ movie, onSelectMovie }) {
   return (
-    <li onClick={onSelectMovie}>
+    <li onClick={() => onSelectMovie(movie.imdbID)}>
       <img src={movie.Poster} alt={`${movie.Title} poster`} />
       <h3>{movie.Title}</h3>
       <div>
@@ -263,8 +269,16 @@ function WatchedMovies({ movie }) {
   );
 }
 
-function MovieDetails({ selectedId }) {
-  return <div className='details'>{selectedId}</div>;
+function MovieDetails({ selectedId, onCloseMovie }) {
+  return (
+    <div className='details'>
+      <button className='btn-black' onClick={onCloseMovie}>
+        &larr;
+      </button>
+
+      {selectedId}
+    </div>
+  );
 }
 function WatchedSummary({ watched }) {
   const avgImdbRating = average(watched.map((movie) => movie.imdbRating));

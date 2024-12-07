@@ -1,27 +1,34 @@
-## Quy tắc ứng xử của cộng đồng [Tên dự án]
+A more comprehensive approach
+[Project Name] Community Code of Conduct
 
-Chúng tôi cam kết tạo ra một cộng đồng thân thiện, tôn trọng và bao gồm mọi người, bất kể giới tính, chủng tộc, tôn giáo, khuyết tật, định hướng tình dục, nhận dạng giới, tuổi tác, kinh nghiệm, hoặc bất kỳ đặc điểm nhận dạng xã hội nào khác.
+We are committed to fostering a welcoming and inclusive community where everyone can contribute to the project in a positive and respectful manner. This code outlines our shared expectations for behavior within our community.
 
-### Những hành vi được khuyến khích:
+Our Values:
 
-* **Tôn trọng:** Luôn đối xử với mọi người một cách tôn trọng và lịch sự.
-* **Cởi mở:** Hoan nghênh mọi đóng góp và ý kiến.
-* **Công bằng:** Đánh giá mọi đóng góp một cách công bằng và khách quan.
-* **Hợp tác:** Làm việc cùng nhau để đạt được mục tiêu chung.
+Respect: We treat everyone with respect, regardless of their background, identity, or experience level.
+Inclusion: We strive to create a community that is inclusive and welcoming to all.
+Openness: We encourage open and honest communication.
+Collaboration: We work together to achieve our shared goals.
+Expected Behavior:
 
-### Những hành vi không được chấp nhận:
+Be respectful: Treat all community members with respect, regardless of their opinions or beliefs.
+Be constructive: Provide constructive feedback and avoid personal attacks.
+Be inclusive: Foster a welcoming and inclusive environment for everyone.
+Be mindful: Be mindful of the impact of your words and actions on others.
+Unacceptable Behavior:
 
-* **Quấy rối:** Bất kỳ hành vi quấy rối, đe dọa, hoặc làm nhục dưới bất kỳ hình thức nào đều không được chấp nhận.
-* **Phân biệt đối xử:** Không được phân biệt đối xử dựa trên bất kỳ đặc điểm nhận dạng xã hội nào.
-* **Xâm phạm quyền riêng tư:** Không được tiết lộ thông tin cá nhân của người khác mà không được sự đồng ý.
-* **Đăng nội dung khiêu khích:** Không được đăng bất kỳ nội dung nào mang tính khiêu khích, thù địch hoặc vi phạm pháp luật.
+Harassment: Harassment, including but not limited to, threats of violence, intimidation, stalking, or other disruptive behavior is strictly prohibited.
+Discrimination: Discrimination based on race, gender, sexual orientation, religion, disability, or any other protected characteristic is unacceptable.   
+Hate speech: Hate speech, including but not limited to, speech that is offensive, abusive, or threatening is prohibited.
+Violation of privacy: Do not share personal information about others without their explicit consent.
+Reporting Violations:
+If you witness or experience any behavior that violates this Code of Conduct, please report it to [email protected] or [link to reporting form]. All reports will be taken seriously and investigated promptly.   
 
-### Báo cáo vi phạm
+Enforcement:
+Violations of this Code of Conduct may result in consequences, including but not limited to:
 
-Nếu bạn chứng kiến bất kỳ hành vi vi phạm quy tắc ứng xử này, vui lòng báo cáo ngay cho đội ngũ quản lý dự án. Chúng tôi sẽ điều tra và xử lý các vi phạm một cách nghiêm túc.
-
-### Quyền và trách nhiệm
-
-Mỗi thành viên của cộng đồng đều có quyền được đối xử công bằng và tôn trọng. Đồng thời, mỗi thành viên cũng có trách nhiệm tuân thủ quy tắc ứng xử này và góp phần xây dựng một cộng đồng tích cực.
-
-**Chúng tôi cam kết sẽ duy trì một môi trường làm việc thân thiện và chuyên nghiệp cho tất cả mọi người.**
+Warnings
+Temporary or permanent bans from participating in the project   
+Other actions as deemed appropriate by the project maintainers
+Our Commitment:
+We are committed to creating a positive and productive community where everyone feels valued and respected. By following this Code of Conduct, we can work together to build a better project.

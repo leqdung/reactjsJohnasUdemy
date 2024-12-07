@@ -241,6 +241,7 @@ function WatchedMoviesList({ watched, onDetelteWatched }) {
     </ul>
   );
 }
+//check ssh
 function WatchedMovies({ movie, onDetelteWatched }) {
   return (
     <li>

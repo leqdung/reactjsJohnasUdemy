@@ -50,6 +50,7 @@ const tempWatchedData = [
 
 const KEY = '576a60ae';
 
+//video 154 the useEffect Cleanup Function
 export default function App() {
   const [query, setQuery] = useState('inception');
   const [movies, setMovies] = useState([]);
